@@ -24,6 +24,15 @@ class GameScene: SKScene {
         
         //background
         starfield.zPosition = -1
+        
+        
+        player = SKSpriteNode(imageNamed: "shuttle")
+        //no phsysics body for player, for easier use
+        
+        // position near center
+        player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20)
+        
+        self.addChild(player)
     }
     
     
