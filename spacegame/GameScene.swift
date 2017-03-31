@@ -11,8 +11,19 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    var starfield: SKEmitterNode!
+    var player: SKSpriteNode!
+    
+    
     override func didMove(to view: SKView) {
         
+        starfield = SKEmitterNode(fileNamed: "Starfield")
+        starfield.position = CGPoint(x: 0, y: 1472) //hardcoded value for this tutorial is ok!?
+        starfield.advanceSimulationTime(10) //because it takes some time scrolling down the black part, skip this time
+        self.addChild(starfield)
+        
+        //background
+        starfield.zPosition = -1
     }
     
     
