@@ -17,6 +17,8 @@
 		586C96591E8E3B6B00D5B097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 586C96571E8E3B6B00D5B097 /* LaunchScreen.storyboard */; };
 		586C96621E8E3CBF00D5B097 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 586C96601E8E3CBF00D5B097 /* explosion.mp3 */; };
 		586C96631E8E3CBF00D5B097 /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 586C96611E8E3CBF00D5B097 /* torpedo.mp3 */; };
+		586C96681E8E3D6300D5B097 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 586C96661E8E3D6300D5B097 /* Explosion.sks */; };
+		586C96691E8E3D6300D5B097 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 586C96671E8E3D6300D5B097 /* Starfield.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		586C965A1E8E3B6B00D5B097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586C96601E8E3CBF00D5B097 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		586C96611E8E3CBF00D5B097 /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		586C96661E8E3D6300D5B097 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		586C96671E8E3D6300D5B097 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				586C96481E8E3B6B00D5B097 /* AppDelegate.swift */,
 				586C964A1E8E3B6B00D5B097 /* GameScene.sks */,
 				586C964C1E8E3B6B00D5B097 /* Actions.sks */,
+				586C96661E8E3D6300D5B097 /* Explosion.sks */,
+				586C96671E8E3D6300D5B097 /* Starfield.sks */,
 				586C964E1E8E3B6B00D5B097 /* GameScene.swift */,
 				586C96501E8E3B6B00D5B097 /* GameViewController.swift */,
 				586C96521E8E3B6B00D5B097 /* Main.storyboard */,
@@ -144,6 +150,8 @@
 				586C96541E8E3B6B00D5B097 /* Main.storyboard in Resources */,
 				586C964B1E8E3B6B00D5B097 /* GameScene.sks in Resources */,
 				586C96561E8E3B6B00D5B097 /* Assets.xcassets in Resources */,
+				586C96681E8E3D6300D5B097 /* Explosion.sks in Resources */,
+				586C96691E8E3D6300D5B097 /* Starfield.sks in Resources */,
 				586C96591E8E3B6B00D5B097 /* LaunchScreen.storyboard in Resources */,
 				586C964D1E8E3B6B00D5B097 /* Actions.sks in Resources */,
 			);
