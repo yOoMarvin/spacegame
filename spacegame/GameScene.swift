@@ -26,6 +26,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //timer properties
     var gameTimer: Timer!
     
+    var possibleAliens = ["alien", "alien2", "alien3"]
+    
     
     override func didMove(to view: SKView) {
         
@@ -71,6 +73,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func addAlien() {
+        
+        //shuffle the alien array to display everytime a random alien
+        possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
+        
+        let alien = SKSpriteNode(imageNamed: possibleAliens[0])
+        
+        let randomAlienPosition = GKRandomDistribution(lowestValue: 0, highestValue: 414)
+        let position = CGFloat(randomAlienPosition.nextInt())
+        
+        alien.position = CGPoint(x: position, y: self.frame.size.height + alien.size.height)
         
         
     }
