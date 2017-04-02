@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
@@ -33,6 +33,9 @@ class GameScene: SKScene {
         player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20)
         
         self.addChild(player)
+        
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        self.physicsWorld.contactDelegate = self
     }
     
     
