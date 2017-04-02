@@ -14,6 +14,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
     
+    var scoreLabel: SKLabelNode!
+    var score: Int = 0 {
+        didSet{
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
     
     override func didMove(to view: SKView) {
         
@@ -34,8 +41,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(player)
         
+        //physiscs
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
+        
+        //score label
+        scoreLabel = SKLabelNode(text: "Score: 0")
+        scoreLabel.position = CGPoint(x: 100, y: self.frame.height - 60)
+        scoreLabel.fontName = "AvenirNext-Heavy"
+        scoreLabel.fontSize = 36
+        scoreLabel.fontColor = UIColor.white
+        score = 0
+        
+        self.addChild(scoreLabel)
     }
     
     
