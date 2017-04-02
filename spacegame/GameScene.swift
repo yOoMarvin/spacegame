@@ -97,7 +97,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alien.physicsBody?.collisionBitMask = 0
         
         self.addChild(alien)
-                
+        
+        let animationDuration: TimeInterval = 6
+        
+        var actionArray = [SKAction]()
+        
+        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
+        actionArray.append(SKAction.removeFromParent())
+        
+        alien.run(SKAction.sequence(actionArray))
+        
         
         
     }
