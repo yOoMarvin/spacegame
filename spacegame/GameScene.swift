@@ -84,6 +84,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         alien.position = CGPoint(x: position, y: self.frame.size.height + alien.size.height)
         
+        alien.physicsBody = SKPhysicsBody(rectangleOf: alien.size)
+        alien.physicsBody?.isDynamic = true
         
     }
     
