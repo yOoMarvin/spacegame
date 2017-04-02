@@ -11,15 +11,20 @@ import GameplayKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    //player properties
     var starfield: SKEmitterNode!
     var player: SKSpriteNode!
     
+    //score properties
     var scoreLabel: SKLabelNode!
     var score: Int = 0 {
         didSet{
             scoreLabel.text = "Score: \(score)"
         }
     }
+    
+    //timer properties
+    var gameTimer: Timer!
     
     
     override func didMove(to view: SKView) {
@@ -54,8 +59,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score = 0
         
         self.addChild(scoreLabel)
+        
+        
+        //timer for enemy spawn
+        gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
+        
     }
     
+    
+    
+    
+    
+    func addAlien() {
+        
+        
+    }
     
     
     
