@@ -112,6 +112,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    func fireTorpedo() {
+        
+        //first play the torpedo sound
+        self.run(SKAction.playSoundFileNamed("torpedo.mp3", waitForCompletion: false))
+        
+        let torpedoNode = SKSpriteNode(imageNamed: "torpedo")
+        torpedoNode.position = player.position
+        torpedoNode.position.y += 5 //move slightly up
+        
+        
+    }
+    
+    
+    
+    
+    
     
     
     
