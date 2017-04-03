@@ -123,6 +123,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         torpedoNode.physicsBody = SKPhysicsBody(circleOfRadius: torpedoNode.size.width / 2)
         torpedoNode.physicsBody?.isDynamic = true
+        
+        torpedoNode.physicsBody?.categoryBitMask = photonTorpedoCategory
+        torpedoNode.physicsBody?.contactTestBitMask = alienCategory
+        torpedoNode.physicsBody?.collisionBitMask = 0
+        torpedoNode.physicsBody?.usesPreciseCollisionDetection = true
+        
+        self.addChild(torpedoNode)
     }
     
     
