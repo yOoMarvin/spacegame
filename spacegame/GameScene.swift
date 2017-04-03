@@ -112,6 +112,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        fireTorpedo()
+    }
+    
+    
+    
     func fireTorpedo() {
         
         //first play the torpedo sound
