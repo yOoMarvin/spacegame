@@ -151,7 +151,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        //comes from implemented delegate
+        //function for physics contact detection
+        //important: Get the info which body is which
+        
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            //body A and B are determined from the < or > 0 info
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        //bitwise compare which body is torpedo and which is alien
+        if (firstBody.categoryBitMask & photonTorpedoCategory) != 0 && (secondBody.categoryBitMask & alienCategory) != 0 {
+            torpedoDidCollideWithAlien(torpedo: firstBody.node as! SKSpriteNode, alien: secondBody.node as! SKSpriteNode)
+        }
+    }
     
+    
+    func torpedoDidCollideWithAlien(torpedo: SKSpriteNode, alien: SKSpriteNode) {
+        //TODO:
+    }
     
     
     
