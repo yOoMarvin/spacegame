@@ -190,6 +190,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             explosion.removeFromParent()
         }
         
+        score += 5
     }
     
     
