@@ -209,6 +209,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    override func didSimulatePhysics() {
+        
+        player.position.x += xAcceleration * 50
+        
+        if player.position.x < -20 {
+            player.position = CGPoint(x: self.size.width + 20, y: player.position.y)
+        }else if player.position.x > self.size.width + 20 {
+            player.position = CGPoint(x: -20, y: player.position.y)
+        }
+    }
+    
+    
+    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
