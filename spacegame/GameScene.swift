@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
@@ -32,6 +33,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //bitmasks for aliens and torpedo
     let alienCategory: UInt32 = 0x1 << 1
     let photonTorpedoCategory: UInt32 = 0x1 << 0
+    
+    
+    let motionManager = CMMotionManager()
+    var xAcceleration: CGFloat = 0
+    
     
     
     override func didMove(to view: SKView) {
@@ -71,6 +77,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //timer for enemy spawn
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
+        
+        //init motion stuff
+        motionManager.accelerometerUpdateInterval = 0.2
+        motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data: CMAccelerometerData?, error: Error?) in
+            if let accelerometerData = data {
+                let acceleration = accelerometerData.acceleration
+                self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
+            }
+        }
     }
     
     
