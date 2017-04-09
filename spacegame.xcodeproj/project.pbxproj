@@ -49,6 +49,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58118D191E9A64700042788F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				586C964A1E8E3B6B00D5B097 /* GameScene.sks */,
+				586C964E1E8E3B6B00D5B097 /* GameScene.swift */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		58118D1A1E9A64810042788F /* Emmitters */ = {
+			isa = PBXGroup;
+			children = (
+				586C96661E8E3D6300D5B097 /* Explosion.sks */,
+				586C96671E8E3D6300D5B097 /* Starfield.sks */,
+			);
+			name = Emmitters;
+			sourceTree = "<group>";
+		};
+		58118D1B1E9A64880042788F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				586C96601E8E3CBF00D5B097 /* explosion.mp3 */,
+				586C96611E8E3CBF00D5B097 /* torpedo.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		586C963C1E8E3B6B00D5B097 = {
 			isa = PBXGroup;
 			children = (
@@ -69,15 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				586C96481E8E3B6B00D5B097 /* AppDelegate.swift */,
-				586C964A1E8E3B6B00D5B097 /* GameScene.sks */,
-				586C964C1E8E3B6B00D5B097 /* Actions.sks */,
-				586C96661E8E3D6300D5B097 /* Explosion.sks */,
-				586C96671E8E3D6300D5B097 /* Starfield.sks */,
-				586C964E1E8E3B6B00D5B097 /* GameScene.swift */,
 				586C96501E8E3B6B00D5B097 /* GameViewController.swift */,
+				586C964C1E8E3B6B00D5B097 /* Actions.sks */,
 				586C96521E8E3B6B00D5B097 /* Main.storyboard */,
-				586C96601E8E3CBF00D5B097 /* explosion.mp3 */,
-				586C96611E8E3CBF00D5B097 /* torpedo.mp3 */,
+				58118D191E9A64700042788F /* Game */,
+				58118D1A1E9A64810042788F /* Emmitters */,
+				58118D1B1E9A64880042788F /* Sounds */,
 				586C96551E8E3B6B00D5B097 /* Assets.xcassets */,
 				586C96571E8E3B6B00D5B097 /* LaunchScreen.storyboard */,
 				586C965A1E8E3B6B00D5B097 /* Info.plist */,
@@ -332,6 +356,7 @@
 				586C965F1E8E3B6B00D5B097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
