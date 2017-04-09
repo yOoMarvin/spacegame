@@ -9,5 +9,19 @@
 import SpriteKit
 
 class MenuScene: SKScene {
+    
+    //MARK: Properties
+    var starfield: SKEmitterNode!
+    
+    var newGameButtonNode: SKSpriteNode!
+    var difficultyButton: SKSpriteNode!
+    var difficultyLabelNode: SKLabelNode!
+    
+    
+    
+    override func didMove(to view: SKView) {
+        
+        
+    }
 
 }
