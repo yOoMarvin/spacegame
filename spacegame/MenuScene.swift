@@ -26,6 +26,8 @@ class MenuScene: SKScene {
         
         newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
         difficultyButtonNode = self.childNode(withName: "difficultyButton") as! SKSpriteNode
+                
+        difficultyLabelNode = self.childNode(withName: "difficultyLabel") as!SKLabelNode
     }
 
 }
