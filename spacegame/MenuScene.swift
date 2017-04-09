@@ -14,14 +14,18 @@ class MenuScene: SKScene {
     var starfield: SKEmitterNode!
     
     var newGameButtonNode: SKSpriteNode!
-    var difficultyButton: SKSpriteNode!
+    var difficultyButtonNode: SKSpriteNode!
     var difficultyLabelNode: SKLabelNode!
     
     
     
     override func didMove(to view: SKView) {
         
+        starfield = self.childNode(withName: "starfield") as! SKEmitterNode
+        starfield.advanceSimulationTime(10)
         
+        newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
+        difficultyButtonNode = self.childNode(withName: "difficultyButton") as! SKSpriteNode
     }
 
 }
