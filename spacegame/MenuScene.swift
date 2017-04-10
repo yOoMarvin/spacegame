@@ -29,5 +29,23 @@ class MenuScene: SKScene {
                 
         difficultyLabelNode = self.childNode(withName: "difficultyLabel") as!SKLabelNode
     }
+    
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch = touches.first //touch object
+        
+        if let location = touch?.location(in: self) {
+            let nodesArray = self.nodes(at: location)
+            
+            if nodesArray.first?.name == "newGameButton" {
+                //transition to game scene
+                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                let gameScene = GameScene(size: self.size)
+                self.view?.presentScene(gameScene, transition: transition)
+            }
+        }
+    }
 
 }
