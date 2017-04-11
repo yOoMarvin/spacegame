@@ -28,6 +28,15 @@ class MenuScene: SKScene {
         difficultyButtonNode = self.childNode(withName: "difficultyButton") as! SKSpriteNode
                 
         difficultyLabelNode = self.childNode(withName: "difficultyLabel") as!SKLabelNode
+        
+        //display the right difficulty at launch
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: "hard") {
+            difficultyLabelNode.text = "Hard"
+        } else {
+            difficultyLabelNode.text = "Easy"
+        }
     }
     
     
