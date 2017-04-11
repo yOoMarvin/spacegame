@@ -38,9 +38,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let motionManager = CMMotionManager()
     var xAcceleration: CGFloat = 0
     
-    
+    //live properties
+    var livesArray: [SKSpriteNode]!
     
     override func didMove(to view: SKView) {
+        
+        addLives()
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
         starfield.position = CGPoint(x: 0, y: 1472) //hardcoded value for this tutorial is ok!?
@@ -65,9 +68,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //score label
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 100, y: self.frame.height - 60)
+        scoreLabel.position = CGPoint(x: 80, y: self.frame.height - 60)
         scoreLabel.fontName = "AvenirNext-Heavy"
-        scoreLabel.fontSize = 36
+        scoreLabel.fontSize = 28
         scoreLabel.fontColor = UIColor.white
         score = 0
         
@@ -89,6 +92,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    
+    func addLives() {
+        
+    }
     
     
     
