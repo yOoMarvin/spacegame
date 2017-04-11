@@ -103,8 +103,7 @@
 				586C96501E8E3B6B00D5B097 /* GameViewController.swift */,
 				586C964C1E8E3B6B00D5B097 /* Actions.sks */,
 				586C96521E8E3B6B00D5B097 /* Main.storyboard */,
-				58118D1C1E9A64DF0042788F /* MenuScene.sks */,
-				58118D1E1E9A66270042788F /* MenuScene.swift */,
+				586F986B1E9B500D001F9913 /* Menu */,
 				58118D191E9A64700042788F /* Game */,
 				58118D1A1E9A64810042788F /* Emmitters */,
 				58118D1B1E9A64880042788F /* Sounds */,
@@ -113,6 +112,15 @@
 				586C965A1E8E3B6B00D5B097 /* Info.plist */,
 			);
 			path = spacegame;
+			sourceTree = "<group>";
+		};
+		586F986B1E9B500D001F9913 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				58118D1C1E9A64DF0042788F /* MenuScene.sks */,
+				58118D1E1E9A66270042788F /* MenuScene.swift */,
+			);
+			name = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
