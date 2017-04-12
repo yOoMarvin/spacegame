@@ -68,7 +68,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //score label
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 80, y: self.frame.height - 60)
+        scoreLabel.position = CGPoint(x: 80, y: self.frame.height - 70)
         scoreLabel.fontName = "AvenirNext-Heavy"
         scoreLabel.fontSize = 28
         scoreLabel.fontColor = UIColor.white
