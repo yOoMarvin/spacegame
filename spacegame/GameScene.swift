@@ -101,6 +101,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func addLives() {
         
+        livesArray = [SKSpriteNode]()
+        
+        for live in 1 ... 3 {
+            let liveNode = SKSpriteNode(imageNamed: "shuttle")
+            liveNode.position = CGPoint(x: self.frame.size.width - CGFloat(4 - live) * liveNode.size.width, y: self.frame.size.height - 60)
+            self.addChild(liveNode)
+            livesArray.append(liveNode)
+        }
     }
     
     
