@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58118D1D1E9A64DF0042788F /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 58118D1C1E9A64DF0042788F /* MenuScene.sks */; };
 		58118D1F1E9A66270042788F /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58118D1E1E9A66270042788F /* MenuScene.swift */; };
+		5818E67B1E9E8FD100849CE8 /* loose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5818E67A1E9E8FD100849CE8 /* loose.mp3 */; };
 		586C96491E8E3B6B00D5B097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586C96481E8E3B6B00D5B097 /* AppDelegate.swift */; };
 		586C964B1E8E3B6B00D5B097 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 586C964A1E8E3B6B00D5B097 /* GameScene.sks */; };
 		586C964D1E8E3B6B00D5B097 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 586C964C1E8E3B6B00D5B097 /* Actions.sks */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		58118D1C1E9A64DF0042788F /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		58118D1E1E9A66270042788F /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		5818E67A1E9E8FD100849CE8 /* loose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = loose.mp3; sourceTree = "<group>"; };
 		586C96451E8E3B6B00D5B097 /* spacegame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spacegame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		586C96481E8E3B6B00D5B097 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		586C964A1E8E3B6B00D5B097 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		58118D1B1E9A64880042788F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				5818E67A1E9E8FD100849CE8 /* loose.mp3 */,
 				586C96601E8E3CBF00D5B097 /* explosion.mp3 */,
 				586C96611E8E3CBF00D5B097 /* torpedo.mp3 */,
 			);
@@ -193,6 +196,7 @@
 				586C96691E8E3D6300D5B097 /* Starfield.sks in Resources */,
 				586C96591E8E3B6B00D5B097 /* LaunchScreen.storyboard in Resources */,
 				586C964D1E8E3B6B00D5B097 /* Actions.sks in Resources */,
+				5818E67B1E9E8FD100849CE8 /* loose.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

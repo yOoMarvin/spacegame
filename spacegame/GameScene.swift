@@ -139,11 +139,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionArray = [SKAction]()
         
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
+        
         //kill one life if array is at bottom
         actionArray.append(SKAction.run {
+            self.run(SKAction.playSoundFileNamed("loose.mp3", waitForCompletion: false))
             
+            if self.livesArray.count > 0 {
+                let liveNode = self.livesArray.first
+                liveNode!.removeFromParent()
+                self.livesArray.removeFirst()
+                
+                if self.livesArray.count == 0 {
+                    // GameOver Screen Transition
+                }
+            }
         })
+        
         actionArray.append(SKAction.removeFromParent())
+        
         
         alien.run(SKAction.sequence(actionArray))
         
