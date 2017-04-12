@@ -139,6 +139,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionArray = [SKAction]()
         
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
+        //kill one life if array is at bottom
+        actionArray.append(SKAction.run {
+            
+        })
         actionArray.append(SKAction.removeFromParent())
         
         alien.run(SKAction.sequence(actionArray))
@@ -148,9 +152,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
+    
+    
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireTorpedo()
     }
+    
+    
+    
     
     
     
