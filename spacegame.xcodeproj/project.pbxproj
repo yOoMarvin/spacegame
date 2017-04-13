@@ -59,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		580FE8571E9F652400BBF366 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				580FE8531E9F62A500BBF366 /* GameOverScene.sks */,
+				580FE8551E9F63F300BBF366 /* GameOverScene.swift */,
+			);
+			name = GameOver;
+			sourceTree = "<group>";
+		};
 		58118D191E9A64700042788F /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +119,7 @@
 				586C96501E8E3B6B00D5B097 /* GameViewController.swift */,
 				586C964C1E8E3B6B00D5B097 /* Actions.sks */,
 				586C96521E8E3B6B00D5B097 /* Main.storyboard */,
-				580FE8531E9F62A500BBF366 /* GameOverScene.sks */,
-				580FE8551E9F63F300BBF366 /* GameOverScene.swift */,
+				580FE8571E9F652400BBF366 /* GameOver */,
 				586F986B1E9B500D001F9913 /* Menu */,
 				58118D191E9A64700042788F /* Game */,
 				58118D1A1E9A64810042788F /* Emmitters */,
