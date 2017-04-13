@@ -151,6 +151,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if self.livesArray.count == 0 {
                     // GameOver Screen Transition
+                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+                    gameOver.score = self.score
+                    self.view!.presentScene(gameOver, transition: transition)
                 }
             }
         })
